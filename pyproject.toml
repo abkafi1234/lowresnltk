@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lowresnltk"
+version = "0.1.0"
+description = "Low Resource NLTK"
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Natural Language Processing :: Libraries"
+]
+readme = "README.md"
+authors = [
+    {name = "abkafi1234", email = "kafi.cse@diu.edu.bd"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "torch",
+    "transformers",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "accelerate"
+]
+
+[project.urls]
+Homepage = "https://github.com/abkafi1234/lowresnltk"
+Repository = "https://github.com/abkafi1234/lowresnltk"
+Issues = "https://github.com/abkafi1234/lowresnltk/issues"
