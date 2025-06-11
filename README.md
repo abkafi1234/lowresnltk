@@ -3,7 +3,7 @@
 A low-resource Natural Language Processing toolkit.
 
 ## Quick Inference Without Training
-Pretrained model achived an F1 Score of 97% in all classes.
+Pretrained model achieved an F1 Score of 97% in all classes.
 
 ### POS Tagging
 ```python
