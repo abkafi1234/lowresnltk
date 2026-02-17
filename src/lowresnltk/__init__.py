@@ -1,5 +1,6 @@
 from .pos_tagger import POSTagger
 from .sentence_classifier import SentenceClassifier
+from .norm_evaluator import NormalizationEvaluator
 
 __version__ = "0.1.0"
-__all__ = ['POSTagger', 'SentenceClassifier']
+__all__ = ['POSTagger', 'SentenceClassifier', 'NormalizationEvaluator']
