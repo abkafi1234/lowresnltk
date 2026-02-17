@@ -70,8 +70,6 @@ result = sc.predict('আমি ভালো আছি')
 
 Evaluate how stemming or lemmatization algorithms affect your text both structurally and semantically, beyond just compression ratios.
 
----
-
 ## Python Example
 
 ```python
