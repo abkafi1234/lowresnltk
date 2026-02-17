@@ -2,7 +2,7 @@ import os
 import subprocess
 
 
-__version__ = "0.1.0"
+__version__ = "1.1.8"
 __all__ = ['POSTagger', 'SentenceClassifier']
 
 # Model files to download
