@@ -66,7 +66,7 @@ result = sc.predict('আমি ভালো আছি')
 ```
 ### Text Normalization Evaluator
 
-**A Unified Multi-Metric Framework for Evaluating Semantic Fidelity in Text Normalization**  
+*A Unified Multi-Metric Framework for Evaluating Semantic Fidelity in Text Normalization**  
 
 Evaluate how stemming or lemmatization algorithms affect your text both structurally and semantically, beyond just compression ratios.
 
