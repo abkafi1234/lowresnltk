@@ -12,7 +12,8 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Intended Audience :: Developers",
-    "Topic :: Natural Language Processing :: Libraries"
+   "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic"
 ]
 readme = "README.md"
 authors = [
