@@ -11,10 +11,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from torch.utils.data import Dataset
 
-from .main import download_model
+
 
 class SentenceDataset(Dataset):
     def __init__(self, sentences, labels, tokenizer, max_length=64):
+        from .main import download_model
         self.encodings = tokenizer(sentences, truncation=True, padding=True, max_length=max_length)
         self.labels = labels
 
