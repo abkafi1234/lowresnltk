@@ -7,10 +7,11 @@ import pandas as pd
 import ast
 import numpy as np
 import os
-from .main import download_model
+
 
 class POSTaggingDataset(Dataset):
     def __init__(self, words, pos_labels, tokenizer, max_length=32):
+        from .main import download_model
         self.words = words
         self.pos_labels = pos_labels
         self.tokenizer = tokenizer
