@@ -15,7 +15,7 @@ from torch.utils.data import Dataset
 
 class SentenceDataset(Dataset):
     def __init__(self, sentences, labels, tokenizer, max_length=64):
-        from .main import download_model
+        
         self.encodings = tokenizer(sentences, truncation=True, padding=True, max_length=max_length)
         self.labels = labels
 
@@ -144,6 +144,7 @@ class SentenceClassifier:
         Load model, tokenizer, and label encoder from model_dir and classify the given sentence.
         """
         # Load tokenizer and model
+        from .main import download_model
         download_model('classifier')
         if model_dir is None:
             model_dir = os.path.expanduser('~/.lowresnltk/ClassifierModel')
