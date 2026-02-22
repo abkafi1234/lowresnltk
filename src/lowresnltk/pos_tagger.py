@@ -11,7 +11,6 @@ import os
 
 class POSTaggingDataset(Dataset):
     def __init__(self, words, pos_labels, tokenizer, max_length=32):
-        from .main import download_model
         self.words = words
         self.pos_labels = pos_labels
         self.tokenizer = tokenizer
@@ -163,6 +162,7 @@ class POSTagger:
         Returns:
             List of POS tags
         """
+        from .main import download_model
         download_model('pos')
         if model_path is None:
             model_path = os.path.expanduser('~/.lowresnltk/POSModel')
