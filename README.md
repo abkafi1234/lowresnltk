@@ -1,9 +1,69 @@
 ﻿# LowResNLTK
 
-A low-resource Natural Language Processing toolkit.
+# lowresnltk 🚀
+**A lightweight, model-agnostic NLP toolkit for Low-Resource Languages.**
 
-## Quick Inference Without Training
-Pretrained model achieved an F1 Score of 97% in all classes.
+`lowresnltk` is designed for researchers who want to apply State-of-the-Art Transformer models (BERT, T5, BART, etc.) to their data without writing thousands of lines of PyTorch boilerplate. It provides a familiar **Scikit-Learn API** (`fit`, `predict`, `evaluate`) for complex NLP tasks.
+
+## 🌟 Key Features
+- **Universal Classifier**: One class for Binary, Multiclass, Multilabel, and Token Classification (NER/POS).
+- **Universal Generator**: Seamless Machine Translation, Summarization, and Paraphrasing.
+- **Hardware Agnostic**: Automatically detects and uses CUDA (NVIDIA), MPS (Apple Silicon), or CPU.
+- **Research Ready**: Built-in methods for Classification Reports, Confusion Matrices, BLEU, and ROUGE scores.
+
+---
+
+## 📦 Installation
+
+```bash
+pip install lowresnltk
+
+
+🛠️ Quick Start
+1. Classification (Sentence or Token/NER)
+Whether you are doing Sentiment Analysis or Part-of-Speech tagging, the API is the same.
+
+Python
+from lowresnltk import UniversalClassifier
+
+# For Sentence Classification (Binary/Multiclass)
+clf = UniversalClassifier(kind='binary', model_name="csebuetnlp/banglabert")
+clf.fit(X_train, y_train, epochs=3)
+
+# For POS Tagging or NER
+ner = UniversalClassifier(kind='token', model_name="csebuetnlp/banglabert")
+ner.fit(X_tokens, y_tags)
+
+# Evaluate like a pro
+ner.evaluate(X_test, y_test)
+2. Machine Translation & Summarization
+Generate text using Encoder-Decoder models like T5 or BART.
+
+Python
+from lowresnltk import UniversalGenerator
+
+# Initialize for Translation
+translator = UniversalGenerator(model_name="csebuetnlp/banglat5")
+
+# Fit on your parallel corpus
+translator.fit(english_texts, bengali_texts, epochs=5)
+
+# Generate translation
+result = translator.predict("The weather is beautiful today.")
+print(result)
+
+# Get academic metrics (BLEU score)
+translator.evaluate(X_test, y_test, task="translation")
+3. Save and Load
+Save your hard-earned trained models for later use.
+
+Python
+model.save("./my_saved_model")
+
+# Later...
+from lowresnltk import UniversalClassifier
+new_model = UniversalClassifier.load("./my_saved_model")
+
 
 ### POS Tagging
 ```python
