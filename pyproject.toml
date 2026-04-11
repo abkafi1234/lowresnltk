@@ -27,7 +27,13 @@ dependencies = [
     "pandas",
     "scikit-learn",
     "accelerate",
-    "Levenshtein"
+    "Levenshtein",
+    "sentencepiece",   # Required for Bengali T5/BERT fast tokenizers
+    "tiktoken",        # Required for modern tokenizers
+    "protobuf",        # Required for sentencepiece
+    "evaluate",        # Required for metric calculation
+    "sacrebleu",       # Required for Translation BLEU scores
+    "rouge_score"      # Required for Summarization ROUGE scores
 ]
 
 [project.urls]
