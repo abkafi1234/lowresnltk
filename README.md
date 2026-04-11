@@ -22,28 +22,26 @@ pip install lowresnltk
 🛠️ Quick Start
 1. Classification (Sentence or Token/NER)
 Whether you are doing Sentiment Analysis or Part-of-Speech tagging, the API is the same.
-```
-Python
+```Python
 from lowresnltk import UniversalClassifier
 ```
 # For Sentence Classification (Binary/Multiclass)
-```
+```python
 clf = UniversalClassifier(kind='binary', model_name="csebuetnlp/banglabert")
 clf.fit(X_train, y_train, epochs=3)
 ```
 # For POS Tagging or NER
-```
+```python
 ner = UniversalClassifier(kind='token', model_name="csebuetnlp/banglabert")
 ner.fit(X_tokens, y_tags)
 ```
 # Evaluate like a pro
-```
+```python
 ner.evaluate(X_test, y_test)
 ```
 2. Machine Translation & Summarization
 Generate text using Encoder-Decoder models like T5 or BART.
-```
-Python
+```Python
 from lowresnltk import UniversalGenerator
 
 # Initialize for Translation
@@ -57,17 +55,17 @@ result = translator.predict("The weather is beautiful today.")
 print(result)
 ```
 # Get academic metrics (BLEU score)
-```
+```python
 translator.evaluate(X_test, y_test, task="translation")
 ```
 3. Save and Load
 Save your hard-earned trained models for later use.
-```
+```python
 Python
 model.save("./my_saved_model")
 ```
 # Later...
-```
+```python
 from lowresnltk import UniversalClassifier
 new_model = UniversalClassifier.load("./my_saved_model")
 ```
