@@ -19,6 +19,25 @@
 pip install lowresnltk
 ```
 
+## Citation
+
+If you use NormEval in your research, please cite:
+
+```bibtex
+@article{KAFI2026102713,
+title = {LowResNLTK: A Python framework for simplifying low-resource natural language processing pipelines},
+journal = {SoftwareX},
+volume = {34},
+pages = {102713},
+year = {2026},
+issn = {2352-7110},
+doi = {https://doi.org/10.1016/j.softx.2026.102713},
+url = {https://www.sciencedirect.com/science/article/pii/S2352711026002050},
+author = {Md Abdullah Al Kafi and Raka Moni and Supta Das Dip},
+}
+
+```
+
 🛠️ Quick Start
 1. Classification (Sentence or Token/NER)
 Whether you are doing Sentiment Analysis or Part-of-Speech tagging, the API is the same.
