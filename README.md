@@ -21,7 +21,7 @@ pip install lowresnltk
 
 ## Citation
 
-If you use NormEval in your research, please cite:
+If you use lowresnltk in your research, please cite:
 
 ```bibtex
 @article{KAFI2026102713,
