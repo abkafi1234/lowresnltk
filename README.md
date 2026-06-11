@@ -1,6 +1,5 @@
 ﻿# LowResNLTK
 
-# lowresnltk 🚀
 **A lightweight, model-agnostic NLP toolkit for Low-Resource Languages.**
 
 `lowresnltk` is designed for researchers who want to apply State-of-the-Art Transformer models (BERT, T5, BART, etc.) to their data without writing thousands of lines of PyTorch boilerplate. It provides a familiar **Scikit-Learn API** (`fit`, `predict`, `evaluate`) for complex NLP tasks.
